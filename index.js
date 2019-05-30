@@ -25,7 +25,8 @@ function menu(){
 
     switch (choice) {
         case '1':
-            alert('Your current balance is: \n €' + balance)    
+            displayBalance('current')
+            menu()    
             break
 
         case '2':
@@ -69,8 +70,8 @@ function getAmountInput(purpose){
 
 // displaying the new balance is also code we wrote before
 // let's reuse it as well
-function displayNewBalance(){
-    alert('Your new balance is: \n €' + balance)
+function displayBalance(status){
+    alert('Your ' + status + ' balance is: \n €' + balance)
 }
 
 function deposit(){
@@ -78,7 +79,8 @@ function deposit(){
     const depositAmount = getAmountInput('deposit')
     
     balance = balance + depositAmount
-    displayNewBalance()
+    displayBalance('new')
+    menu()
 }
 
 function withdraw(){
@@ -91,7 +93,8 @@ function withdraw(){
     }
 
     balance = balance - withdrawAmount
-    displayNewBalance()
+    displayBalance('new')
+    menu()
 }
 
 init()
