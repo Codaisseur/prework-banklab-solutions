@@ -13,11 +13,22 @@ function withdraw(){
     // If a user clicks 'cancel' on the prompt box input will be 'null'
     // So we stop the withdrawing process
     if(input === null){
+        // return here stops the function
         return
     }
-
+    
     // using parseInt to convert the string from prompt into a number (so we can do math)
     const withdrawAmount = parseInt(input)
+
+    // It's also possible users type in something other than an amount
+    // if we parseInt then we will get NaN (not a number)
+    // In that case we want them to try again (maybe it was a typo?)
+    if(isNaN(withdrawAmount)){
+        alert('Oops, that\'s not a number')
+        // stop this function and start over with the withdraw process
+        return withdraw()
+    }
+
     // using typeof to check if withdrawAmount is now a number (it is)
     console.log(typeof withdrawAmount)
     console.log('withdraw amount:', withdrawAmount)
