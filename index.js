@@ -15,6 +15,7 @@ function menu(){
 
     1.) Show balance
     2.) Withdraw money
+    3.) Deposit money
 
     Please enter a number:
     (or click cancel to exit)
@@ -30,6 +31,11 @@ function menu(){
         case '2':
             withdraw()
             break
+        
+        // Adding an option to the switch case statement
+        case '3':
+            deposit()
+            break
 
         case null:
             break
@@ -39,6 +45,11 @@ function menu(){
             menu()
             break
     }
+}
+
+function deposit(){
+    // console logging to test
+    console.log('testing!')
 }
 
 function withdraw(){
@@ -76,8 +87,8 @@ init()
  * [X] 5.) As a user I want to be able to choose if I want to know my balance or deposit money,
  *         So I can do what is relevant for me.
  * [ ] 6.) As a user I want to be able to choose to deposit money into my account, so It's safely stored.
- *         - Add an option to the menu for user to choose to deposit money
- *         - Handle the choice in the switch case statement
+ *         X Add an option to the menu for user to choose to deposit money
+ *         X Handle the choice in the switch case statement
  *         - Call a function deposit
  *         - Ask the user how much he wants to deposit
  *         - Check if the input is valid (a number)
