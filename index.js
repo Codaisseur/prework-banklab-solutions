@@ -76,6 +76,13 @@ init()
  * [X] 5.) As a user I want to be able to choose if I want to know my balance or deposit money,
  *         So I can do what is relevant for me.
  * [ ] 6.) As a user I want to be able to choose to deposit money into my account, so It's safely stored.
+ *         - Add an option to the menu for user to choose to deposit money
+ *         - Handle the choice in the switch case statement
+ *         - Call a function deposit
+ *         - Ask the user how much he wants to deposit
+ *         - Check if the input is valid (a number)
+ *         - Add the money to the balance
+ *         - Send the user back to the menu
  * [ ] 7.) As a bank I want to prevent users from depositing more money in their account than they have,
  *         so I don't go bankrupt.
  * [ ] 8.) As user I want to log in using a username and password, so strangers don't withdraw my money.
