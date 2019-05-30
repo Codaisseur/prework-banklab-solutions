@@ -71,6 +71,10 @@ function displayBalance(status){
 
 function deposit(){
     const depositAmount = getAmountInput('deposit')
+
+    if(cash < depositAmount){
+        alert('Cannot deposit: €' + depositAmount + ' cash on hand is only: €' + cash)
+    }
     
     balance = balance + depositAmount
     displayBalance('new')
@@ -105,8 +109,8 @@ init()
  * [ ] 7.) As a bank I want to prevent users from depositing more money in their account than they have,
  *         so I don't go bankrupt.
  *         X Add variable for cash of the current user
- *         - Add a check to see if the user has enough cash to deposit
- *         - Add a warning when user has insufficient cash
+ *         X Add a check to see if the user has enough cash to deposit
+ *         X Add a warning when user has insufficient cash
  *         - Let the user try again
  *         - Implement cash when withdrawing
  * [ ] 8.) As user I want to log in using a username and password, so strangers don't withdraw my money.
