@@ -5,7 +5,10 @@ const password = 'test1234'
 
 function init(){
     const userAuthenticated = authenticateUser()
-    console.log(userAuthenticated)
+
+    if(!userAuthenticated){
+        return alert('You have been locked out, please contact customer support')
+    }
 
     alert('Hello! ' + userName)
 
@@ -133,7 +136,7 @@ init()
  *         X Prompt the user for his username
  *         X Prompt the username for a password
  *         X Check if the username and password match
- *         - If they do, grant access
+ *         X If they do, grant access
  *         - If they don't let the user try 2 more times
  *         - If the user tries 3 times lock them out of trying again
 */
