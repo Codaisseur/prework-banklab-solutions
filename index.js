@@ -78,6 +78,8 @@ function deposit(){
     }
     
     balance = balance + depositAmount
+    cash = cash - depositAmount
+
     displayBalance('new')
     menu()
 }
@@ -91,6 +93,8 @@ function withdraw(){
     }
 
     balance = balance - withdrawAmount
+    cash = cash + withdrawAmount
+
     displayBalance('new')
     menu()
 }
@@ -112,7 +116,7 @@ init()
  *         X Add variable for cash of the current user
  *         X Add a check to see if the user has enough cash to deposit
  *         X Add a warning when user has insufficient cash
- *         - Let the user try again
- *         - Implement cash when withdrawing
+ *         X Let the user try again
+ *         X Implement cash when withdrawing
  * [ ] 8.) As user I want to log in using a username and password, so strangers don't withdraw my money.
 */
