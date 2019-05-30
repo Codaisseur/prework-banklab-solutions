@@ -4,6 +4,9 @@ let userName = 'JohnDoe'
 function init(){
     alert('Hello! ' + userName)
     alert('Your current balance is: \n €' + balance)    
+    const withdrawAmount = prompt('How much would you like to withdraw?')
+    // console logging to check if it works
+    console.log(withdrawAmount)
 }
 
 init()
@@ -16,7 +19,7 @@ init()
  * [ ] 3.) As a user I want to be able to withdraw money from my account so 
  *         I can spend it on things I like.
  *         X Change balance variable to something higher than 0
- *         - Prompt the user for an amount they want to withdraw
+ *         X Prompt the user for an amount they want to withdraw
  *         - Subtract the amount from the balance variable
  *         - Display the balance again
  * [ ] 4.) As a bank I want prevent users from withdrawing money don't have, so I don't go bankrupt.
