@@ -9,10 +9,10 @@ init()
 /** 
  * Userstories
  * 
- * [ ] 1.) As a user I want to know my current balance so I can make sound financial decisions
- *         X Make a variable to store the current balance
- *         X Display it to the user when the program starts
+ * [X] 1.) As a user I want to know my current balance so I can make sound financial decisions
  * [ ] 2.) As a bank I want to greet my user, so the user feels welcome.
+ *         - Create a variable that stores the user's name
+ *         - Greet the user when the program starts
  * [ ] 3.) As a user I want to be able to withdraw money from my account so 
  *         I can spend it on things I like.
  * [ ] 4.) As a bank I want prevent users from withdrawing money don't have, so I don't go bankrupt.
