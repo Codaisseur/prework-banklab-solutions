@@ -4,9 +4,15 @@ let userName = 'JohnDoe'
 function init(){
     alert('Hello! ' + userName)
     alert('Your current balance is: \n €' + balance)    
-    const withdrawAmount = prompt('How much would you like to withdraw?')
-    // console logging to check if it works
-    console.log(withdrawAmount)
+    // using parseInt to convert the string from prompt into a number (so we can do math)
+    const withdrawAmount = parseInt(prompt('How much would you like to withdraw?'))
+    // using typeof to check if withdrawAmount is now a number (it is)
+    console.log(typeof withdrawAmount)
+    console.log('withdraw amount:', withdrawAmount)
+    // subtracting withdrawAmount from balance and reassigning balance
+    balance = balance - withdrawAmount
+    // checking if it works using console.log
+    console.log('new balance:', balance)
 }
 
 init()
@@ -20,7 +26,7 @@ init()
  *         I can spend it on things I like.
  *         X Change balance variable to something higher than 0
  *         X Prompt the user for an amount they want to withdraw
- *         - Subtract the amount from the balance variable
+ *         X Subtract the amount from the balance variable
  *         - Display the balance again
  * [ ] 4.) As a bank I want prevent users from withdrawing money don't have, so I don't go bankrupt.
  * [ ] 5.) As a user I want to be able to choose if I want to know my balance or deposit money,
