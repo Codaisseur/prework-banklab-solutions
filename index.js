@@ -4,15 +4,27 @@ let userName = 'JohnDoe'
 function init(){
     alert('Hello! ' + userName)
     alert('Your current balance is: \n €' + balance)    
+    withdraw()
+    alert('Goodbye')    
+}
+
+function withdraw(){
+    const input = prompt('How much would you like to withdraw?')
+    // If a user clicks 'cancel' on the prompt box input will be 'null'
+    // So we stop the withdrawing process
+    if(input === null){
+        return
+    }
+
     // using parseInt to convert the string from prompt into a number (so we can do math)
-    const withdrawAmount = parseInt(prompt('How much would you like to withdraw?'))
+    const withdrawAmount = parseInt(input)
     // using typeof to check if withdrawAmount is now a number (it is)
     console.log(typeof withdrawAmount)
     console.log('withdraw amount:', withdrawAmount)
     // subtracting withdrawAmount from balance and reassigning balance
     balance = balance - withdrawAmount
     // display the new balance to the user
-    alert('Your new balance is: \n €' + balance)    
+    alert('Your new balance is: \n €' + balance)
 }
 
 init()
