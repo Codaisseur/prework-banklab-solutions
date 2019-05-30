@@ -4,11 +4,21 @@ const userName = 'JohnDoe'
 const password = 'test1234'
 
 function init(){
+    authenticateUser()
+
     alert('Hello! ' + userName)
 
     menu()
 
     alert('Goodbye')    
+}
+
+function authenticateUser(){
+    const userNameInput = prompt('Please enter your username')
+    const passwordInput = prompt('Please enter your password')
+
+    // Testing
+    console.log(userNameInput, passwordInput)
 }
 
 function menu(){
@@ -115,9 +125,9 @@ init()
  * [X] 7.) As a bank I want to prevent users from depositing more money in their account than they have,
  *         so I don't go bankrupt.
  * [ ] 8.) As user I want to log in using a username and password, so strangers don't withdraw my money.
- *         - Add a password variable
- *         - Prompt the user for his username
- *         - Prompt the username for a password
+ *         X Add a password variable
+ *         X Prompt the user for his username
+ *         X Prompt the username for a password
  *         - Check if the username and password match
  *         - If they do, grant access
  *         - If they don't let the user try 2 more times
