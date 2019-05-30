@@ -11,8 +11,8 @@ function init(){
     console.log('withdraw amount:', withdrawAmount)
     // subtracting withdrawAmount from balance and reassigning balance
     balance = balance - withdrawAmount
-    // checking if it works using console.log
-    console.log('new balance:', balance)
+    // display the new balance to the user
+    alert('Your new balance is: \n €' + balance)    
 }
 
 init()
@@ -27,7 +27,7 @@ init()
  *         X Change balance variable to something higher than 0
  *         X Prompt the user for an amount they want to withdraw
  *         X Subtract the amount from the balance variable
- *         - Display the balance again
+ *         X Display the balance again
  * [ ] 4.) As a bank I want prevent users from withdrawing money don't have, so I don't go bankrupt.
  * [ ] 5.) As a user I want to be able to choose if I want to know my balance or deposit money,
  *         So I can do what is relevant for me.
