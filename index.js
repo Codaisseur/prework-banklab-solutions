@@ -47,24 +47,36 @@ function menu(){
     }
 }
 
-function deposit(){
-    // console logging to test
-    console.log('testing!')
-}
-
-function withdraw(){
-    const input = prompt('How much would you like to withdraw?')
-
+// we want to get an amount to deposit from the user
+// that's very similar to asking the user for an amount to withdraw
+// let's reuse that code by putting it into a function
+function getAmountInput(purpose){
+    const input = prompt('How much would you like to ' + purpose + '?')
+    
     if(input === null){
         return
     }
     
-    const withdrawAmount = parseInt(input)
-
-    if(isNaN(withdrawAmount)){
+    const amount = parseInt(input)
+    
+    if(isNaN(amount)){
         alert('Oops, that\'s not a number')
-        return withdraw()
+        return getAmountInput(purpose)
     }
+
+    return amount
+}
+
+function deposit(){
+    // using our getAmountInput function here
+    const depositAmount = getAmountInput('deposit')
+    
+    console.log('testing deposit amount: ', depositAmount)
+}
+
+function withdraw(){
+    // using our getAmountInput function here as well
+    const withdrawAmount = getAmountInput('withdraw')
 
     if(balance < withdrawAmount){
         alert('Cannot withdraw: €' + withdrawAmount + ' balance is only: €' + balance)
@@ -89,9 +101,9 @@ init()
  * [ ] 6.) As a user I want to be able to choose to deposit money into my account, so It's safely stored.
  *         X Add an option to the menu for user to choose to deposit money
  *         X Handle the choice in the switch case statement
- *         - Call a function deposit
- *         - Ask the user how much he wants to deposit
- *         - Check if the input is valid (a number)
+ *         X Call a function deposit
+ *         X Ask the user how much he wants to deposit
+ *         X Check if the input is valid (a number)
  *         - Add the money to the balance
  *         - Send the user back to the menu
  * [ ] 7.) As a bank I want to prevent users from depositing more money in their account than they have,
