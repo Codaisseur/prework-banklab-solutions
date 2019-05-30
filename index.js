@@ -4,7 +4,7 @@ const userName = 'JohnDoe'
 const password = 'test1234'
 
 function init(){
-    const userAuthenticated = authenticateUser()
+    const userAuthenticated = authenticateUser(2)
 
     if(!userAuthenticated){
         return alert('You have been locked out, please contact customer support')
@@ -17,7 +17,8 @@ function init(){
     alert('Goodbye')    
 }
 
-function authenticateUser(){
+function authenticateUser(triesLeft){
+    console.log(triesLeft)
     const userNameInput = prompt('Please enter your username')
     const passwordInput = prompt('Please enter your password')
 
@@ -25,6 +26,11 @@ function authenticateUser(){
         return true
     }
     
+    if(triesLeft >= 1){
+        alert('username or password do not match')
+        return authenticateUser(triesLeft - 1)
+    }
+
     return false
 }
 
@@ -137,6 +143,6 @@ init()
  *         X Prompt the username for a password
  *         X Check if the username and password match
  *         X If they do, grant access
- *         - If they don't let the user try 2 more times
- *         - If the user tries 3 times lock them out of trying again
+ *         X If they don't let the user try 2 more times
+ *         X If the user tries 3 times lock them out of trying again
 */
