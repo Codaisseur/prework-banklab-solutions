@@ -1,6 +1,7 @@
 let balance = 250
 let cash = 25
-let userName = 'JohnDoe'
+const userName = 'JohnDoe'
+const password = 'test1234'
 
 function init(){
     alert('Hello! ' + userName)
@@ -111,12 +112,14 @@ init()
  * [X] 5.) As a user I want to be able to choose if I want to know my balance or deposit money,
  *         So I can do what is relevant for me.
  * [X] 6.) As a user I want to be able to choose to deposit money into my account, so It's safely stored.
- * [ ] 7.) As a bank I want to prevent users from depositing more money in their account than they have,
+ * [X] 7.) As a bank I want to prevent users from depositing more money in their account than they have,
  *         so I don't go bankrupt.
- *         X Add variable for cash of the current user
- *         X Add a check to see if the user has enough cash to deposit
- *         X Add a warning when user has insufficient cash
- *         X Let the user try again
- *         X Implement cash when withdrawing
  * [ ] 8.) As user I want to log in using a username and password, so strangers don't withdraw my money.
+ *         - Add a password variable
+ *         - Prompt the user for his username
+ *         - Prompt the username for a password
+ *         - Check if the username and password match
+ *         - If they do, grant access
+ *         - If they don't let the user try 2 more times
+ *         - If the user tries 3 times lock them out of trying again
 */
