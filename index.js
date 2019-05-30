@@ -4,7 +4,8 @@ const userName = 'JohnDoe'
 const password = 'test1234'
 
 function init(){
-    authenticateUser()
+    const userAuthenticated = authenticateUser()
+    console.log(userAuthenticated)
 
     alert('Hello! ' + userName)
 
@@ -17,8 +18,11 @@ function authenticateUser(){
     const userNameInput = prompt('Please enter your username')
     const passwordInput = prompt('Please enter your password')
 
-    // Testing
-    console.log(userNameInput, passwordInput)
+    if(userNameInput === userName && passwordInput === password){
+        return true
+    }
+    
+    return false
 }
 
 function menu(){
@@ -128,7 +132,7 @@ init()
  *         X Add a password variable
  *         X Prompt the user for his username
  *         X Prompt the username for a password
- *         - Check if the username and password match
+ *         X Check if the username and password match
  *         - If they do, grant access
  *         - If they don't let the user try 2 more times
  *         - If the user tries 3 times lock them out of trying again
