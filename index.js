@@ -103,5 +103,10 @@ init()
  * [X] 6.) As a user I want to be able to choose to deposit money into my account, so It's safely stored.
  * [ ] 7.) As a bank I want to prevent users from depositing more money in their account than they have,
  *         so I don't go bankrupt.
+ *         - Add variable for cash of the current user
+ *         - Add a check to see if the user has enough cash to deposit
+ *         - Add a warning when user has insufficient cash
+ *         - Let the user try again
+ *         - Implement cash when withdrawing
  * [ ] 8.) As user I want to log in using a username and password, so strangers don't withdraw my money.
 */
