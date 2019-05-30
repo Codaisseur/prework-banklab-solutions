@@ -67,11 +67,18 @@ function getAmountInput(purpose){
     return amount
 }
 
+// displaying the new balance is also code we wrote before
+// let's reuse it as well
+function displayNewBalance(){
+    alert('Your new balance is: \n €' + balance)
+}
+
 function deposit(){
     // using our getAmountInput function here
     const depositAmount = getAmountInput('deposit')
     
     balance = balance + depositAmount
+    displayNewBalance()
 }
 
 function withdraw(){
@@ -84,7 +91,7 @@ function withdraw(){
     }
 
     balance = balance - withdrawAmount
-    alert('Your new balance is: \n €' + balance)
+    displayNewBalance()
 }
 
 init()
