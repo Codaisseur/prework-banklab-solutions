@@ -24,8 +24,10 @@ function withdraw(){
 
     // If the user's balance is less than the withdraw amount
     if(balance < withdrawAmount){
-        // console logging to check
-        console.log('balance: ', balance, 'withdraw amount: ', withdrawAmount)
+        // give feedback to user
+        alert('Cannot withdraw: €' + withdrawAmount + ' balance is only: €' + balance)
+        // restart withdrawing process
+        return withdraw()
     }
 
     balance = balance - withdrawAmount
@@ -42,7 +44,7 @@ init()
  * [X] 3.) As a user I want to be able to withdraw money from my account so 
  * [ ] 4.) As a bank I want prevent users from withdrawing money don't have, so I don't go bankrupt.
  *         X Check if the user is withdrawing more than they have
- *         - If they are, let them try again (probably it was mistake)
+ *         X If they are, let them try again (probably it was mistake)
  * [ ] 5.) As a user I want to be able to choose if I want to know my balance or deposit money,
  *         So I can do what is relevant for me.
  * [ ] 6.) As a user I want to be able to choose to deposit money into my account, so It's safely stored.
