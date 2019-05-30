@@ -1,20 +1,26 @@
 let balance = 250
 let userName = 'JohnDoe'
 
-// putting this text into a variable to not clutter the program
-// I am using a template string (make them with backticks ``)
-// It preservers empty lines and other formatting
-let optionsText = `
+function init(){
+    alert('Hello! ' + userName)
+
+    menu()
+
+    alert('Goodbye')    
+}
+
+function menu(){
+    // putting this text into a variable to not clutter the program
+    // I am using a template string (make them with backticks ``)
+    // It preservers empty lines and other formatting
+    let optionsText = `
     What would you like to do?
-    
+
     1.) Show balance
     2.) Withdraw money
 
     Please enter a number:
-`
-
-function init(){
-    alert('Hello! ' + userName)
+    `
 
     // prompting the user for a number and storing it in choice
     const choice = prompt(optionsText)
@@ -35,10 +41,10 @@ function init(){
         // input is something else.. user made a mistake
         default:
             alert(choice + ' is an invalid input, sorry!')
+            // let user try again from the beginning of the menu
+            menu()
             break
     }
-
-    alert('Goodbye')    
 }
 
 function withdraw(){
