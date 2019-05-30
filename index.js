@@ -1,7 +1,7 @@
 let balance = 0
 
 function init(){
-    console.log('hello')    
+    alert('Your current balance is: \n €' + balance)    
 }
 
 init()
@@ -11,7 +11,7 @@ init()
  * 
  * [ ] 1.) As a user I want to know my current balance so I can make sound financial decisions
  *         X Make a variable to store the current balance
- *         - Display it to the user when the program starts
+ *         X Display it to the user when the program starts
  * [ ] 2.) As a bank I want to greet my user, so the user feels welcome.
  * [ ] 3.) As a user I want to be able to withdraw money from my account so 
  *         I can spend it on things I like.
