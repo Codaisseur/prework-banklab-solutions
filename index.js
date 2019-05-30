@@ -1,4 +1,4 @@
-let balance = 0
+let balance = 250
 let userName = 'JohnDoe'
 
 function init(){
@@ -15,7 +15,7 @@ init()
  * [X] 2.) As a bank I want to greet my user, so the user feels welcome.
  * [ ] 3.) As a user I want to be able to withdraw money from my account so 
  *         I can spend it on things I like.
- *         - Change balance variable to something higher than 0
+ *         X Change balance variable to something higher than 0
  *         - Prompt the user for an amount they want to withdraw
  *         - Subtract the amount from the balance variable
  *         - Display the balance again
