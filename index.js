@@ -74,6 +74,7 @@ function deposit(){
 
     if(cash < depositAmount){
         alert('Cannot deposit: €' + depositAmount + ' cash on hand is only: €' + cash)
+        return deposit()
     }
     
     balance = balance + depositAmount
