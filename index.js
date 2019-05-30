@@ -15,7 +15,11 @@ let optionsText = `
 
 function init(){
     alert('Hello! ' + userName)
-    alert(options)
+
+    // prompting the user for a number and storing it in choice
+    const choice = prompt(optionsText)
+    // checking the value of choice
+    console.log(choice)
 
     alert('Your current balance is: \n €' + balance)    
     withdraw()
@@ -56,8 +60,8 @@ init()
  * [X] 4.) As a bank I want prevent users from withdrawing money don't have, so I don't go bankrupt.
  * [ ] 5.) As a user I want to be able to choose if I want to know my balance or deposit money,
  *         So I can do what is relevant for me.
- *         - Display options to user
- *         - Prompt the user for input
+ *         X Display options to user
+ *         X Prompt the user for input
  *         - Based on users input withdraw or show balance
  * [ ] 6.) As a user I want to be able to choose to deposit money into my account, so It's safely stored.
  * [ ] 7.) As a bank I want to prevent users from depositing more money in their account than they have,
