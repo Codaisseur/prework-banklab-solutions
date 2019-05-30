@@ -21,8 +21,23 @@ function init(){
     // checking the value of choice
     console.log(choice)
 
-    alert('Your current balance is: \n €' + balance)    
-    withdraw()
+    // Checking what choice is and using a switch case to determine what to next
+    switch (choice) {
+        // input is '1', show balance
+        case '1':
+            alert('Your current balance is: \n €' + balance)    
+            break
+        // input is '2', withdraw money
+        case '2':
+            withdraw()
+            break
+
+        // input is something else.. user made a mistake
+        default:
+            alert(choice + ' is an invalid input, sorry!')
+            break
+    }
+
     alert('Goodbye')    
 }
 
@@ -62,7 +77,7 @@ init()
  *         So I can do what is relevant for me.
  *         X Display options to user
  *         X Prompt the user for input
- *         - Based on users input withdraw or show balance
+ *         X Based on users input withdraw or show balance
  * [ ] 6.) As a user I want to be able to choose to deposit money into my account, so It's safely stored.
  * [ ] 7.) As a bank I want to prevent users from depositing more money in their account than they have,
  *         so I don't go bankrupt.
