@@ -1,8 +1,22 @@
 let balance = 250
 let userName = 'JohnDoe'
 
+// putting this text into a variable to not clutter the program
+// I am using a template string (make them with backticks ``)
+// It preservers empty lines and other formatting
+let optionsText = `
+    What would you like to do?
+    
+    1.) Show balance
+    2.) Withdraw money
+
+    Please enter a number:
+`
+
 function init(){
     alert('Hello! ' + userName)
+    alert(options)
+
     alert('Your current balance is: \n €' + balance)    
     withdraw()
     alert('Goodbye')    
