@@ -20,6 +20,7 @@ function menu(){
     2.) Withdraw money
 
     Please enter a number:
+    (or click cancel to exit)
     `
 
     // prompting the user for a number and storing it in choice
@@ -33,9 +34,15 @@ function menu(){
         case '1':
             alert('Your current balance is: \n €' + balance)    
             break
+            
         // input is '2', withdraw money
         case '2':
             withdraw()
+            break
+
+        // user clicked cancel
+        case null:
+            // we do nothing
             break
 
         // input is something else.. user made a mistake
