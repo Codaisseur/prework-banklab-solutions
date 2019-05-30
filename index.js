@@ -71,7 +71,7 @@ function deposit(){
     // using our getAmountInput function here
     const depositAmount = getAmountInput('deposit')
     
-    console.log('testing deposit amount: ', depositAmount)
+    balance = balance + depositAmount
 }
 
 function withdraw(){
@@ -104,7 +104,7 @@ init()
  *         X Call a function deposit
  *         X Ask the user how much he wants to deposit
  *         X Check if the input is valid (a number)
- *         - Add the money to the balance
+ *         X Add the money to the balance
  *         - Send the user back to the menu
  * [ ] 7.) As a bank I want to prevent users from depositing more money in their account than they have,
  *         so I don't go bankrupt.
