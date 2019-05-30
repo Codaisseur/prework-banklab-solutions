@@ -1,4 +1,5 @@
 let balance = 0
+let userName = 'JohnDoe'
 
 function init(){
     alert('Your current balance is: \n €' + balance)    
