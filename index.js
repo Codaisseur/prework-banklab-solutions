@@ -137,12 +137,5 @@ init()
  * [X] 6.) As a user I want to be able to choose to deposit money into my account, so It's safely stored.
  * [X] 7.) As a bank I want to prevent users from depositing more money in their account than they have,
  *         so I don't go bankrupt.
- * [ ] 8.) As user I want to log in using a username and password, so strangers don't withdraw my money.
- *         X Add a password variable
- *         X Prompt the user for his username
- *         X Prompt the username for a password
- *         X Check if the username and password match
- *         X If they do, grant access
- *         X If they don't let the user try 2 more times
- *         X If the user tries 3 times lock them out of trying again
+ * [X] 8.) As user I want to log in using a username and password, so strangers don't withdraw my money.
 */
